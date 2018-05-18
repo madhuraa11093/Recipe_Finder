@@ -1,0 +1,413 @@
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* General Demo Style */
+body {
+	font-family: 'Lato', 'Myriad Pro','Trebuchet MS', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	/*height: 100vh;*/
+	// padding-top: 20px;
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+
+h1{
+	color: #553716;
+	// text-shadow: 1.5px 1.5px 5px #000000;
+	font-weight: 500;
+}
+
+h3 {
+	text-align: center;
+	font-weight: 300;
+	font-size:50px;
+	color: #553716;
+	text-shadow: 1.5px 1.5px 5px #2f2f2f;
+}
+
+.transbox {
+position: absolute;
+//background : linear-gradient(-90deg,#95c940, #03b099);
+background : linear-gradient(-45deg,#d4b790, #f8ede2);
+//background : linear-gradient(-45deg,#d4b790, #f8ede2);
+//background : linear-gradient(-45deg, #f7e3cd,#f8ede2);
+//20df20
+z-index:-1;
+opacity : 0.8;
+width : 200px;
+height: 200px;
+margin-left: 6%;
+padding: 0;
+top:20px;
+// bottom:130px;
+box-shadow: 7px 7px 7px #555555;
+}
+
+.transbox2 {
+position: absolute;
+background : linear-gradient(-45deg,#d4b790, #f8ede2);
+//	background : linear-gradient(-90deg, #f4690e, #f9ae31);
+//20df20
+margin-left:21.5%;
+z-index:-1;
+opacity : 0.7;
+width : 60%;
+height: 100%;
+
+padding: 0;
+//top:170px;
+// bottom:130px;
+//box-shadow: 7px 7px 7px #333333;
+box-shadow: 0px 3px 15px 5px #555555;
+}
+.transbox3 {
+position: absolute;
+//background : linear-gradient(-90deg,#95c940, #03b099);
+//background : linear-gradient(-90deg, #f4690e, #f9ae31);
+background : linear-gradient(-45deg,#d4b790, #f8ede2);
+//background : linear-gradient(-45deg, #f7e3cd,#f8ede2);
+//20df20
+z-index:-1;
+opacity : 0.7;
+width : 200px;
+height: 200px;
+margin: 0;
+padding: 0;
+top:20px;
+margin-left: 83%;
+// bottom:130px;
+box-shadow: 7px 7px 7px #555555;
+}
+.transbox4 {
+position: absolute;
+//background : linear-gradient(-90deg,#95c940, #03b099);
+//background : linear-gradient(-90deg, #f4690e, #f9ae31);
+background : linear-gradient(-45deg,#f8ede2,#d4b790);
+//background : linear-gradient(-45deg, #f7e3cd,#f8ede2);
+//20df20
+z-index:-1;
+opacity : 0.8;
+width : 100%;
+height: 80px;
+margin: 0;
+padding: 0;
+
+
+// bottom:130px;
+box-shadow: 7px 7px 7px #555555;
+}
+
+.transboxdiv{
+	width:50%;
+	text-align: center;
+	margin-left: 23%;
+}
+.container-fluid {
+	position: relative;
+	padding: 0;
+	/*height: 100vh;*/
+	overflow-y:auto;
+}
+
+.ri-grid{
+	margin: 30px auto 30px;
+	position: relative;
+	/*height: auto;
+	height: 100vh;*/
+	margin-bottom: 0;
+
+	overflow-y:auto;
+}
+
+.ri-grid ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Clear floats by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.ri-grid ul:before,
+.ri-grid ul:after{
+	content: '';
+    display: table;
+}
+
+.ri-grid ul:after {
+    clear: both;
+}
+
+.ri-grid ul {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.ri-grid ul li {
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+	-o-perspective: 400px;
+	-ms-perspective: 400px;
+	perspective: 400px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background: #000;
+}
+
+.ri-grid ul li a{
+	display: block;
+	outline: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #333;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* Grid wrapper sizes */
+.ri-grid-size-1{
+	width: 55%;
+}
+.ri-grid-size-2{
+	width: 100%;
+}
+.ri-grid-size-3{
+	width: 100%;
+	margin-top: 0px;
+}
+
+/* Shadow style */
+.ri-shadow:after,
+.ri-shadow:before{
+	content: "";
+	position: absolute;
+	z-index: -2;
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	max-width: 300px;
+	max-height: 100px;
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+.ri-shadow:after{
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+.ri-grid-loading:after,
+.ri-grid-loading:before{
+	display: none;
+}
+
+.ri-loading-image{
+	display: none;
+}
+
+.ri-grid-loading .ri-loading-image{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	margin: 100px 0 0 -15px;
+	display: block;
+}
+
+/* *************************
+importing the css for the overlay and main button
+**************************** */
+@import "./overlay_button.scss";
+
+
+
+//STYLING FOR RECIPES.HBS
+
+
+
+
+.Ingredients{
+
+    display: block;
+    text-align: center;
+
+
+
+}
+
+.Choose {
+
+    text-align: center;
+}
+
+.buttons {
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	background-color: white;
+	color:#FF0000;
+	margin-left: 107%;
+	font-size: 17px;
+	font-style: italic;
+	font-family: "Georgia";
+}
+
+form {
+    display: block;
+    text-align: center;
+}
+
+.not-selected {
+    background-color: white;
+}
+
+.selected {
+    background-color: lightpink;
+}
+
+.buttons:hover {
+    background-color: lightblue;
+}
+
+
+.resetButton {
+	background-color: white;
+	float: left;
+	width: 20%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5%;
+	font-style: italic;
+	font-family: "Georgia";
+	margin-left: 22%;
+	margin-bottom:7px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	height: 80px;
+
+}
+
+.resetButton:hover{
+    background-color: cadetblue;
+}
+
+.nextButton {
+	background-color: white;
+	float: right;
+	width: 20%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5%;
+	margin-right: 23.5%;
+	font-style: italic;
+	font-family: "Georgia";
+	margin-bottom: 10px;
+	font-size: 30px;
+	height: 80px;
+
+}
+
+.submitButton:hover{
+    background-color: indianred;
+}
+.panel-heading {
+	background : linear-gradient(-45deg,rgba(212,183,144, 0.9), rgba(248,237,226, 0.8));
+	opacity:1;
+	z-index:-1;
+	box-shadow: 1.5px 1.5px 4px #333333;
+}
+
+
+.results .panel-heading {
+	// background: linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+
+}
+
+.results h1 {
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	font-size: 50px;
+	font-style: italic;
+	font-family: "Georgia";
+	text-shadow: 1px 1px 8px #333333;
+}
+
+.results .panel-title{
+	color:black;
+	font-size:25px;
+}
+
+.results {
+	width: 80%;
+	margin-left:140px;
+	text-align:center;
+
+}
+.glyphicon-arrow-down{
+	color:green;
+}
+/*.left, .right{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+		background-color: white;
+		height: 100vh;
+
+>>>>>>> 7474ba0b19aecd7a396b028051239f84797fc085
+
+}*/
+
+
+
+.content{
+    margin-left: 10px;
+    margin-right: -10px;
+}
+@import "mystyle.scss";
+@import "./navbar.scss";
